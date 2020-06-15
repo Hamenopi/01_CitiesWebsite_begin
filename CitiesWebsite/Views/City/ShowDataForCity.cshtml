@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "ShowDataForCity";
+}
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="~/css/style.css" />
+</head>
+
+<body>
+    <div>
+        <h2>@ViewBag.City.Name</h2>
+        <p>@ViewBag.City.Country</p>
+        <p>@ViewBag.City.TimeZone</p>
+        <span>
+            <img src=@Url.Action("GetImage",
+                      new { cityName = ViewBag.City.Name}) />
+        </span>
+        <a asp-action="ShowCities">Back</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "ShowCities";
+}
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <h1>Select City</h1>
+    @foreach (var item in ViewBag.Cities)
+    {
+        <h2><a asp-action="ShowDataForCity" asp-route-cityname=@item.Key>@item.Key</a></h2>
+    }
+
+</body>
+</html>
+
